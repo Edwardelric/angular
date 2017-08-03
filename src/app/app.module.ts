@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +10,9 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { StockmanageComponent } from './stock/stockmanage/stockmanage.component';
 import { StarsComponent } from './stars/stars.component';
+import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService } from './hero.service';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,15 @@ import { StarsComponent } from './stars/stars.component';
     ContentComponent,
     FooterComponent,
     StockmanageComponent,
-    StarsComponent
+    StarsComponent,
+    HeroDetailComponent,
+    HeroesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
