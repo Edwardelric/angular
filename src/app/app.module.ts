@@ -10,7 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
-  declarations: [
+  declarations: [       // 声明模块拥有的视图类: 组件，指令，管道  // exports 是否可以认为是公用组件
     AppComponent,
     HeroesComponent,
     DashboardComponent,
