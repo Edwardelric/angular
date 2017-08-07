@@ -84,7 +84,7 @@ const HEROES: Hero[] = [
 })
 export class AppComponent {
   title: string = 'app';
-  heroes = HEROES;
+  heroes: Hero[] = HEROES;
   selectedHero: Hero;
   selectHero(selectedHero: Hero): void {
     this.selectedHero = selectedHero;
