@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
-
+import { Logger } from './logger.service';
 
 @Component({
   selector: 'app-root',
@@ -63,15 +63,21 @@ import { HeroService } from './hero.service';
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `]
+  `],
+  providers: [HeroService, Logger]
 })
 export class AppComponent implements OnInit{
-  title = 'app';
+  title = 'appedward';
   heroes: Hero[];
   selectedHero: Hero;
-  constructor(private heroService: HeroService) { }
+  constructor(
+    private heroService: HeroService,
+    private logger: Logger
+  ) {
+  }
   getHeroes(): void {
     this.heroes = this.heroService.getHeroes();
+    this.logger.log(`asfafa${this.title}`);
   }
   ngOnInit(): void {
     this.getHeroes();

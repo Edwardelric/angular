@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StockmanageComponent } from './stock/stockmanage/stockmanage.component';
 import { StarsComponent } from './stars/stars.component';
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService } from './hero.service';
+
 import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
@@ -31,7 +31,6 @@ import { HeroesComponent } from './heroes/heroes.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
